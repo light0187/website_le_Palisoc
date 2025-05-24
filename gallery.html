@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>4x4 Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .gallery img,
+    .gallery video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    video {
+      background-color: #000;
+    }
+
+    @media (max-width: 900px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>The Greatest of the Century</h1>
+
+  <div class="gallery">
+    <!-- Images -->
+    <img src="https://facts.net/wp-content/uploads/2023/10/25-surprising-facts-about-magnus-carlsen-1697160910.jpg" alt="Image 1">
+    <img src="https://th.bing.com/th/id/OIP.PktufskTr1_bBN-ZenpnWAHaE8?cb=iwc1&rs=1&pid=ImgDetMain" alt="Image 2">
+    <img src="https://th.bing.com/th/id/OIP.5B1_Uy1ePdbpY_uslQ7_2QHaFJ?cb=iwc1&rs=1&pid=ImgDetMain" alt="Image 3">
+    <img src="https://i1.wp.com/dvmlpvxjdo2l2.cloudfront.net/wp-content/uploads/2020/02/09161709/wesley.jpg?ssl=1" alt="Image 4">
+
+   
+    <video controls>
+      <source src="vid4.mp4" type="video/mp4">
+    </video>
+    <video controls>
+      <source src="vid3.mp4" type="video/mp4"> 
+    </video>
+    <video controls>
+      <source src="vid2.mp4" type="video/mp4">
+    </video>
+    <video controls>
+      <source src="vid1.mp4" type="video/mp4">
+    </video>
+  </div>
+
+</body>
+</html>
